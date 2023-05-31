@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/css/Student_Sub_Info.css" />
+		<title>Student Home Page</title>
+	</head>
+	<body>
+		<div class="menu-wrap">
+			<input type="checkbox" class="toggler" />
+			<div class="hamburger"><div></div></div>
+			<div class="menu">
+				<div>
+					<div>
+						<ul>
+							<li><a href="/Student_Home">Home</a></li>
+							<li><a href="/Student_Info">Student Details</a></li>
+							<li><a href="/Student_Sub_Info">Course Reports</a></li>
+							<li><a href="/Student_Grade_Tracking">Grade Tracking</a></li>
+							<li><a href="/Student_Attendance">Attendence</a></li>
+							<li><a href="/Student_Feedback">Feedbacks</a></li>
+							<li><a href="/Student_Resources">Resources</a></li>
+							<li><a href="/Student_Broadcasts">Broadcasts</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="selector">
+				<form action="/Student_Sub_Info" method="post">
+				<label id="labelh" for="Subject">Choose Subject</label>
+				<select name="Subject" id="Subject">
+					<option disabled selected> select </option>
+					<% for (var i=0; i<student.length; i++) { %>
+	
+					<option value="<%= student[i].course_Name.id %>"> <%= student[i].course_Name.name %></option>
+					
+					<%}%>
+				</select>
+				<div style="display: flex; justify-content: center; margin-top: 20px;">
+					<button type="submit" style="background-color: white; color: black; border: none; border-radius: 10px;">Find Course Report</a></button>
+				</div>
+			</form>
+			</div>
+		</div>
+	</body>
+</html>

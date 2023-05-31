@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="/css/Faculty_Resources.css" />
+		<title>Faculty Resources</title>
+	</head>
+	<body>
+		<div class="menu-wrap">
+			<input type="checkbox" class="toggler" />
+			<div class="hamburger"><div></div></div>
+			<div class="menu">
+				<div>
+					<div>
+						<ul>
+							<li><a href="/Faculty_Home">Home</a></li>
+							<li><a href="/Faculty_Info">Faculty Details</a></li>
+							<li><a href="/Faculty_Sub_Info">Course Reports</a></li>
+							<li><a href="/Faculty_Resources">Course Resources</a></li>
+							<li><a href="/Faculty_Broadcasts">Broadcasts</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="container">
+            <div class="title">Resources</div>
+			<div class="course-table" style="color: black;">
+				<table class="table table-striped" style="border: 2px solid black;">
+				  <tr class="table-warning" >
+				  <th style="border: 2px solid black;">Title</th>
+				  <th style="border: 2px solid black;">Link</th>
+				  </tr>
+				  <% for (var i=0; i<faculty.length; i++) { %>
+				  <tr class="table-success">
+					  <td style="border: 2px solid black;">Reference Material for <%= faculty[i].course_Name.name %> </td>
+					  <td style="border: 2px solid black;"><a href="<%= faculty[i].fac_Course_Link%>" target="_blank"><button style= "color: blue;">Download</button></a></td>
+				  </tr>
+                <%}%>   
+              </table>
+            </div>
+          </div>
+	</body>
+</html>

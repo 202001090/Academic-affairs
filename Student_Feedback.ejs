@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/Student_Feedback.css" />
+    <title>Feedback</title>
+  </head>
+  <body>
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler" />
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="/Student_Home">Home</a></li>
+                        <li><a href="/Student_Info">Student Details</a></li>
+                        <li><a href="/Student_Sub_Info">Course Reports</a></li>
+                        <li><a href="/Student_Grade_Tracking">Grade Tracking</a></li>
+                        <li><a href="/Student_Attendance">Attendence</a></li>
+                        <li><a href="/Student_Feedback">Feedbacks</a></li>
+                        <li><a href="/Student_Resources">Resources</a></li>
+                        <li><a href="/Student_Broadcasts">Broadcasts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="heading"> <h1>Feedback</h1> </div>
+    <div class="main-container">
+        <section id="feedback">
+            <div class="container">
+                <form action="/Student_Feedback" method="post">
+                    <div class="selector">
+                        <label style="color: black; border: none; border-radius: 10px;" id="labelh" for="Subject">Choose Subject</label>
+                        <h1 name="id"></h1>
+                        <select name="Subject" id="Subject">
+                            <% for (var i=0; i<StuSub.length; i++) { %>
+                            <option ><%=StuSub[i].course_Name.name %> </option>
+                            <% } %>
+                        </select>
+                    </div>
+                    <br>
+                    <br>
+                   
+
+                    <div id="Feedback">
+                        <div id="Feedback_Label">
+                            <label for="feedback">Write your Feedback:</label>
+                        </div>
+                       
+                        <div id="Feedback_Text"> 
+                            <textarea id="feedback" name="feedback" required></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="Feedback_Submit">
+                        <input style="
+                        width: 60%;
+                        height: 40px;
+                        margin: 10px auto;
+                        justify-content: center;
+                        display: block;
+                        color: #fff;
+                        background: #573b8a;
+                        font-size: 1em;
+                        font-weight: bold;
+                        margin-top: 20px;
+                        outline: none;
+                        border: none;
+                        border-radius: 5px;
+                        transition: .2s ease-in;
+                        cursor: pointer;"  type="submit" value="Submit Feedback">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+  </body>
+</html>

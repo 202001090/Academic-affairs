@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/css/Student_Sub_Report.css" />
+		<title>Student Course Report</title>
+	</head>
+	<body>
+		<div class="menu-wrap">
+			<input type="checkbox" class="toggler" />
+			<div class="hamburger"><div></div></div>
+			<div class="menu">
+				<div>
+					<div>
+						<ul>
+							<li><a href="/Student_Home">Home</a></li>
+							<li><a href="/Student_Info">Student Details</a></li>
+							<li><a href="/Student_Sub_Info">Course Reports</a></li>
+							<li><a href="/Student_Grade_Tracking">Grade Tracking</a></li>
+							<li><a href="/Student_Attendance">Attendence</a></li>
+							<li><a href="/Student_Feedback">Feedbacks</a></li>
+							<li><a href="/Student_Resources">Resources</a></li>
+							<li><a href="/Student_Broadcasts">Broadcasts</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="container">
+            <div class="title">Course Reports</div>
+            <h3><%=StuSub.course_Name.name %></h3>
+            <div class="course-table">
+              <table>
+                <th>Event</th>
+                <th>My Marks</th>
+                <th>Avg Marks</th>
+                <th>Total Marks</th>
+                <tr>
+                  <td>Midsem1</td>
+                  	<td><%= StuSub.midsem1 %></td>
+					<td><%= FacSub.midsem1[1] %></td>
+					<td><%= FacSub.midsem1[2] %></td>
+
+                </tr>
+				
+                <tr>
+					<td>Midsem2</td>
+					<td><%= StuSub.midsem2 %></td>
+				  <td><%= FacSub.midsem2[1] %></td>
+				  <td><%= FacSub.midsem2[2] %></td>
+                  </tr>
+                  <tr>
+                    <td>Endsem</td>
+                  	<td><%= StuSub.midsem1 %></td>
+					<td><%= FacSub.midsem2[1] %></td>
+					<td><%= FacSub.midsem2[2] %></td>
+                      
+                    </tr>
+                </tr>
+              </table>
+            </div>
+          </div>
+	</body>
+</html>
+
+  
+

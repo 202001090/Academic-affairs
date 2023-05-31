@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="/css/Admin_Faculty_Info.css" />
+		<title>Faculty Info</title>
+	</head>
+	<body>
+		<div class="menu-wrap">
+			<input type="checkbox" class="toggler" />
+			<div class="hamburger"><div></div></div>
+			<div class="menu">
+				<div>
+					<div>
+						<ul>
+							<li><a href="/Admin_Home">Home</a></li>
+							<li><a href="/Admin_Student_Info">Student Information</a></li>
+							<li><a href="/Admin_Faculty_Info">Faculty Information</a></li>
+							<li><a href="/Admin_Broadcasts">Broadcasts</a></li>
+							<li><a href="/Admin_Feedback">Feedback</a></li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="container">
+            <div class="title">Faculty Information</div>
+            <div class="course-table" style="color: black;">
+				<table class="table table-striped" style="border: 2px solid black;">
+				  <thead >
+					  <tr class="table-warning" >
+						  <th scope="col" style="border: 2px solid black;">Name</th>
+						  <th scope="col" style="border: 2px solid black;">ID</th>
+					  </tr>
+				  </thead>
+				  <tbody>
+				  <% faculty.forEach(function(faculty) { %>
+					<tr class="table-success">
+					  <td style="border: 2px solid black;"><%= faculty.name %></td>
+					  <td style="border: 2px solid black;"><%= faculty.faculty_ID%>  </td>
+					  </tr>
+					<% }) %>
+				  </tbody>
+				</table>
+			  </div>
+			</div>
+  
+	  </body>
+  </html>
+  

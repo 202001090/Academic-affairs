@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/Student_Attendance.css" />
+    <title>Attendence</title>
+  </head>
+  <body>
+		<div class="menu-wrap">
+			<input type="checkbox" class="toggler" />
+			<div class="hamburger"><div></div></div>
+			<div class="menu">
+				<div>
+					<div>
+						<ul>
+							<li><a href="/Student_Home">Home</a></li>
+							<li><a href="/Student_Info">Student Details</a></li>
+							<li><a href="/Student_Sub_Info">Course Reports</a></li>
+							<li><a href="/Student_Grade_Tracking">Grade Tracking</a></li>
+							<li><a href="/Student_Attendance">Attendence</a></li>
+							<li><a href="/Student_Feedback">Feedbacks</a></li>
+							<li><a href="/Student_Resources">Resources</a></li>
+							<li><a href="/Student_Broadcasts">Broadcasts</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+    <div class="container">
+      <div class="title">Semester List</div>
+      <div class="course-table">
+        <table>
+          <th style="background-color: #ffeeba;">Subject</th>
+          <th style="background-color: #ffeeba;">Attended</th>
+          <th style="background-color: #ffeeba;"> Total Lectures</th>
+          <tr></tr>
+          <% for (var i=0; i<StuSub.length; i++) { %>
+          <td style="background-color: #c3e6cb;"><%= StuSub[i].course_Name.name %></td>
+          <td style="background-color: #c3e6cb;"><%= StuSub[i].attendance %></td>
+          <td style="background-color: #c3e6cb;">10</td>
+          <tr></tr>
+          <%}%>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

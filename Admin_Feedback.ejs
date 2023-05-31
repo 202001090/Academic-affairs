@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/css/Admin_Feedback.css" />
+		<title>Admin Home</title>
+	</head>
+	<body>
+		<div class="menu-wrap">
+			<input type="checkbox" class="toggler" />
+			<div class="hamburger"><div></div></div>
+			<div class="menu">
+				<div>
+					<div>
+						<ul>
+							<li><a href="/Admin_Home">Home</a></li>
+							<li><a href="/Admin_Student_Info">Student Information</a></li>
+							<li><a href="/Admin_Faculty_Info">Faculty Information</a></li>
+							<li><a href="/Admin_Broadcasts">Broadcasts</a></li>
+							<li><a href="/Admin_Feedback">Feedback</a></li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="selector">
+				<form action="/Admin_Feedback" method="post">
+				<label id="labelh" for="Subject">Choose Subject</label>
+				<select name="Subject" id="Subject" style="border-radius: 10px;">
+				<% for(var i=0;i<Courses.length;i++) {%>
+					<option value="<%=Courses[i].id%>"><%= Courses[i].name %></option>
+				<% } %>
+			</select>
+			<div style="display: flex; justify-content: center; margin-top: 20px;">
+				<button type="submit" style="background-color: white; color: black; border-radius: 10px; padding: 10px;">View Feedbacks</a></button>
+			</div>
+			</form>
+			</div>
+		</div>
+	</body>
+</html>
